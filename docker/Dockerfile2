@@ -1,0 +1,13 @@
+# Dockerfile for analyzing random distributions
+FROM dceoy/r-tidyverse
+
+RUN apt-get update
+
+# Install r-packages
+RUN R -e "install.packages(c('DT', 'here', 'magrittr'), repos='http://cran.rstudio.com/')"
+
+# Copy the script into the container
+COPY analyze_distributions.R /usr/local/bin/
+
+# Set the entry point to the script
+ENTRYPOINT ["Rscript", "/usr/local/bin/analyze_distributions.R"]
