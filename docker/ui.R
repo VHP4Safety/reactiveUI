@@ -5,7 +5,7 @@ ui <- dashboardPage(
   dashboardHeader(title = "Distribution Analysis with Docker"),
   dashboardSidebar(
     sidebarMenu(
-      menuItem("Data Input", tabName = "dataInput", icon = icon("input")),
+      menuItem("Data Input", tabName = "dataInput", icon = icon("rocket")),
       menuItem("Results", tabName = "results", icon = icon("chart-bar"))
     )
   ),
